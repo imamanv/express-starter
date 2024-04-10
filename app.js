@@ -17,3 +17,11 @@ app.all("*", (req, res) => {
 app.listen(3000, () => {
   console.log("Server is listening on Port 3000");
 });
+
+// app.get
+// app.post
+// app.put
+// app.delete
+// app.all
+// app.listen
+// app.use
