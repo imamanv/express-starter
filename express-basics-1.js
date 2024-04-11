@@ -18,10 +18,10 @@ app.listen(3000, () => {
   console.log("Server is listening on Port 3000");
 });
 
-// app.get
-// app.post
-// app.put
-// app.delete
+// app.get -  read data
+// app.post - insert data
+// app.put - update data
+// app.delete - delete data
 // app.all
 // app.listen
 // app.use
