@@ -19,6 +19,9 @@ const logger = (req, res, next) => {
 
 app.use("/api", logger); // this will only apply logger middleware to requests reaching on url starting from api for ex api/items and api/products
 
+// to use multiple middlewares we can pass the middlewares in an array as arguement to app.use method for ex. app.use([logger,someOtherMiddleware])
+// keep in mind the order of middleware in array matters, i.e logger will be executed first and then the other one.
+
 app.get("/", (req, res) => {
   res.status(200).send("<h4>Home Page</h4>");
 });
@@ -34,5 +37,8 @@ app.get("/api/products", (req, res) => {
 app.get("/api/items", (req, res) => {
   res.status(200).send("<h4>Items Page</h4>");
 });
+// app.get("/api/items",[logger,someOtherMiddleware], (req, res) => {
+//     res.status(200).send("<h4>Items Page</h4>");
+//   });
 
 app.listen(3000, () => {});
